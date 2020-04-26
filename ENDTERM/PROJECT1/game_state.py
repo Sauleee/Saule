@@ -9,11 +9,11 @@ import time
 class GameState:     #состояние игры
     def __init__(self):
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
-        self.hero = Hero(YELLOW, START_POSITION)   #цвет позиция ширина и высота
+        self.hero = Hero(YELLOW, START_POSITION)   
         self.balls = []
         self.last_time = 0
         self.score = 0
-        self.font = pygame.font.Font(None, BASE_FONT_SIZE)  #шрифт, обычный и размер
+        self.font = pygame.font.Font(None, BASE_FONT_SIZE)
        
     def process(self):
         if time.time() - self.last_time >= 1:
