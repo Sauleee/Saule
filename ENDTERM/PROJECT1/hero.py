@@ -12,7 +12,7 @@ class Hero:
         self.speed = 5
 
     def move(self, keys):
-        if keys[pygame.K_RIGHT]:  #извлекает значение из кортежа по индексу.Значение которого записано в константе ,если TRUE то координата меняется
+        if keys[pygame.K_RIGHT]:  
             self.x += self.speed
         if keys[pygame.K_LEFT]:
             self.x -= self.speed
