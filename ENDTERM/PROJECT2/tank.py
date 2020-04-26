@@ -17,7 +17,7 @@ class Tank:
                     d_up: Direction.UP, d_down: Direction.DOWN}
 
     def draw(self, screen):
-        tank_c = (self.x + int(self.width / 2), self.y + int(self.width / 2))  #это центр
+        tank_c = (self.x + int(self.width / 2), self.y + int(self.width / 2))  
         pygame.draw.rect(screen, self.color,
                          (self.x, self.y, self.width, self.width), 2)
         pygame.draw.circle(screen, self.color, tank_c, int(self.width / 2))
@@ -40,7 +40,7 @@ class Tank:
     def move(self):
         if self.direction == Direction.LEFT:
             self.x -= self.speed
-            if self.x + self.width <= 0:  #за пределами шыгып кетпес ушн
+            if self.x + self.width <= 0:  
                 self.x = WIDTH
         elif self.direction == Direction.RIGHT:
             self.x += self.speed
